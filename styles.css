@@ -1,0 +1,297 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #001aa7, #001067);
+    color: #cfd8ef;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001067;
+    padding: 15px; /* Reduced padding */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px; /* Reduced margin */
+}
+
+nav ul li a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.outline-btn {
+    border: 2px solid #ff7f50;
+    color: #ff7f50;
+    padding: 8px 16px; /* Reduced padding */
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.outline-btn:hover {
+    background-color: #ff7f50;
+    color: #fff;
+}
+
+#hero {
+    position: relative;
+    background-image: url('WMS_image_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #cfd8ef;
+    padding: 160px 20px; /* Reduced padding */
+    text-align: center;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 36px; /* Reduced font size */
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px; /* Reduced font size */
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 12px 24px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-content button:active {
+    transform: scale(0.95);
+}
+
+#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Define the fade-up animation */
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Initial state before animation */
+.services-container .service img {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Triggered state for animation */
+.services-container .service img.fade-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#services .service {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+}
+
+#services .service img {
+    max-width: 100%;
+    height: auto;
+}
+
+#contact {
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 2.5%;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    width: 100%;
+}
+
+#contact-form label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px; /* Increased font size */
+    text-align: left;
+}
+
+#contact-form .required {
+    font-size: 14px;
+    color: #aaa;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+    width: 60%; /* Reduced width */
+}
+
+#contact-form textarea {
+    height: 80px; /* Reduced height */
+}
+
+#contact-form button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 12px 24px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 60%;
+}
+
+#contact-form button:active {
+    transform: scale(0.95);
+}
+
+#map {
+    flex-basis: 35%;
+    width: 100%;
+    padding-right: 10%;
+}
+
+#map iframe {
+    width: 100%; /* Match width of map container */
+    height: 100%; /* Match height of map container */
+    border: 0; /* Remove default border */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #001067;
+    color: #cfd8ef;
+}
+
+.footer-section {
+    flex-basis: 30%; /* Ensure equal spacing */
+    text-align: center; /* Center-align text inside each section */
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+/* Align "Water Management and Analytics" section to the left */
+.footer-section:first-child {
+    text-align: left;
+}
+
+/* Center-align "Contact" and "Menu" sections */
+.footer-section:nth-child(2),
+.footer-section:nth-child(3) {
+    text-align: center;
+}
+
+.footer-section p, .footer-section ul {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+.footer-section button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Links in the "Contact" section */
+.footer-section:nth-child(2) a {
+    color: #ff7f50; /* Update this to your desired color */
+}
+
+/* Adjust the spacing between "Home," "About," "Services," and "Contact" in the footer menu */
+.footer-section:nth-child(3) ul li {
+    margin-bottom: 10px; /* Increase spacing between menu items */
+}
+
+.footer-note {
+    display: flex; /* Remove the WordPress text */
+}
